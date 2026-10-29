@@ -23,39 +23,52 @@
     </nav>
   </div>
 </header>
+<div class="pride"></div>
 <main>
   <div class="wrap">
-    <figure class="shot big" data-file="home-top.jpg">
-      <img src="images/home-top.jpg" alt="" onerror="this.remove()">
-    </figure>
-
-    <div class="intro">
+    <section class="hero">
       <h1>Queerverse</h1>
+      <!-- mia: the yellow splash text picks one of these lines at random. Change them to your own jokes. -->
+      <span class="splash" data-lines="Now whitelisted!|Pranks welcome!|Bring snacks!|Build together!|Also try the shopping district!">Now whitelisted!</span>
       <p>A small, whitelisted, long-term queer survival server.</p>
-      <p class="todo">mia: write two or three sentences here about what the server is like, in your own words.</p>
-      <p>Join on Java Edition: <span class="address">queerverse.net</span></p>
-      <p><a class="button" href="apply.html">How to apply</a></p>
-    </div>
+      <p>Java Edition &middot; <span class="address">queerverse.net</span></p>
+      <div class="actions">
+        <a class="button" href="apply.html">How to apply</a>
+        <a class="button" href="https://discord.gg/YOUR-INVITE">Join the Discord</a>
+      </div>
+      <figure class="shot big" data-file="home-top.jpg">
+        <img src="images/home-top.jpg" alt="" onerror="this.remove()">
+      </figure>
+    </section>
 
-    <h2>Builds</h2>
-    <!-- mia: upload screenshots to the images folder with these names (build-1.jpg, build-2.jpg ...)
-         and they show up here by themselves. Change the captions to say what each build is and who made it. -->
-    <div class="grid">
+    <section class="panel">
+      <h2>What it's like</h2>
+      <p class="todo">mia: write two or three sentences here about what the server is like, in your own words.</p>
+      <ul class="blocks">
+        <li>Build, mostly. Big projects, small projects, together or alone.</li>
+        <li>A shopping district.</li>
+        <li>Pranks, the harmless kind.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Builds</h2>
+      <!-- mia: upload screenshots to the images folder with these names (build-1.jpg, build-2.jpg ...)
+           and they show up here by themselves. Change the captions to say what each build is and who made it. -->
+      <div class="grid">
       <figure class="shot" data-file="build-1.jpg"><img src="images/build-1.jpg" alt="" onerror="this.remove()"><figcaption>caption</figcaption></figure>
       <figure class="shot" data-file="build-2.jpg"><img src="images/build-2.jpg" alt="" onerror="this.remove()"><figcaption>caption</figcaption></figure>
       <figure class="shot" data-file="build-3.jpg"><img src="images/build-3.jpg" alt="" onerror="this.remove()"><figcaption>caption</figcaption></figure>
       <figure class="shot" data-file="build-4.jpg"><img src="images/build-4.jpg" alt="" onerror="this.remove()"><figcaption>caption</figcaption></figure>
       <figure class="shot" data-file="build-5.jpg"><img src="images/build-5.jpg" alt="" onerror="this.remove()"><figcaption>caption</figcaption></figure>
       <figure class="shot" data-file="build-6.jpg"><img src="images/build-6.jpg" alt="" onerror="this.remove()"><figcaption>caption</figcaption></figure>
-    </div>
+      </div>
+    </section>
 
-    <h2>What we do</h2>
-    <ul>
-      <li>Build, mostly. Big projects, small projects, together or alone.</li>
-      <li>A shopping district.</li>
-      <li>Pranks, the harmless kind.</li>
-    </ul>
-    <p class="todo">mia: change or add to this list.</p>
+    <script>
+      var s = document.querySelector('.splash'), l = s.dataset.lines.split('|');
+      s.textContent = l[Math.floor(Math.random() * l.length)];
+    </script>
   </div>
 </main>
 <footer>
