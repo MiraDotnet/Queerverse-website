@@ -190,3 +190,4 @@ code.cmd {
   background: var(--bg-2); border: 1px solid var(--line); border-radius: 4px;
   padding: 1px 6px; color: var(--gold); white-space: nowrap;
 }
+.uses { margin: -.4em 0 .8em; color: var(--muted); font-size: .9rem; }
