@@ -172,3 +172,21 @@ footer a { color: var(--text); }
 }
 .gallery .shot.wide:only-child { grid-column: 1 / -1; }
 .hero.small + main > section.block:first-child { padding-top: 24px; }
+
+/* guide page */
+.toc { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.toc a {
+  color: var(--text); text-decoration: none; font-size: .9rem;
+  background: rgba(0,0,0,.4); border: 1px solid rgba(255,255,255,.2);
+  border-radius: 999px; padding: 4px 12px;
+}
+.toc a:hover { border-color: var(--gold); color: var(--gold); }
+section.guide { padding: 48px 0; scroll-margin-top: 16px; }
+.howto { margin: 0; padding-left: 1.2em; }
+.howto li { margin-bottom: .7em; max-width: 72ch; }
+.howto li::marker { color: var(--gold); }
+code.cmd {
+  font-family: ui-monospace, "Cascadia Mono", Menlo, monospace; font-size: .9em;
+  background: var(--bg-2); border: 1px solid var(--line); border-radius: 4px;
+  padding: 1px 6px; color: var(--gold); white-space: nowrap;
+}
