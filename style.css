@@ -2,13 +2,13 @@
    Colors. Change these to your own and the whole site follows.
    ------------------------------------------------------------ */
 :root {
-  --bg: #121815;         /* page background, deep forest night */
-  --bg-2: #19211d;       /* slightly lighter sections and cards */
-  --line: #2a3530;       /* thin borders */
+  --bg: #10151a;         /* page background, night sky */
+  --bg-2: #182028;       /* slightly lighter sections and cards */
+  --line: #27313b;       /* thin borders */
   --text: #efe6d4;       /* main text, warm off-white */
   --muted: #a9a08f;      /* quieter text */
-  --gold: #f2b866;       /* golden hour accent: links, numbers, buttons */
-  --gold-ink: #1b1408;   /* text on gold buttons */
+  --gold: #f4a9c8;       /* cherry blossom pink: links, numbers, buttons */
+  --gold-ink: #2a1320;   /* text on pink buttons */
   --splash: #ffe066;     /* the yellow splash text */
 
   /* thin pride stripe at the very top, left to right */
@@ -45,16 +45,17 @@ header .wrap {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
   gap: 8px 28px; padding-top: 18px; padding-bottom: 18px;
 }
-.logo { font-size: 1.5rem; color: var(--text); text-decoration: none; text-shadow: 0 2px 12px rgba(0,0,0,.4); }
+.logo img { width: 40px; height: 40px; border-radius: 8px; }
+.logo { display: inline-flex; align-items: center; gap: 10px; font-size: 1.5rem; color: var(--text); text-decoration: none; text-shadow: 0 2px 12px rgba(0,0,0,.4); }
 nav { display: flex; flex-wrap: wrap; gap: 4px 22px; }
 nav a { color: var(--text); text-decoration: none; font-weight: 500; font-size: .98rem; text-shadow: 0 1px 8px rgba(0,0,0,.5); }
 nav a:hover, nav a[aria-current] { color: var(--gold); }
 
-/* the big picture at the top. Your screenshot goes over the painted sunset. */
+/* the big picture at the top */
 .hero {
   position: relative; overflow: hidden;
   min-height: 92vh; display: flex; align-items: flex-end;
-  background: #c9774a url("textures/dusk.svg") center bottom / cover;
+  background: #2a3a4a;
 }
 .hero.small { min-height: 46vh; }
 .hero > img {
@@ -65,7 +66,7 @@ nav a:hover, nav a[aria-current] { color: var(--gold); }
 .hero::after {
   /* fade into the page so text is readable */
   content: ""; position: absolute; inset: 0;
-  background: linear-gradient(to top, var(--bg) 0%, rgba(18,24,21,.55) 35%, rgba(18,24,21,0) 70%);
+  background: linear-gradient(to top, var(--bg) 0%, rgba(16,21,26,.55) 35%, rgba(16,21,26,0) 70%);
 }
 .hero .wrap { position: relative; z-index: 1; width: 100%; padding-bottom: 56px; }
 .hero h1 {
@@ -169,3 +170,5 @@ footer a { color: var(--text); }
   .numbered li { padding-left: 56px; }
   .numbered li::before { font-size: 1.6rem; }
 }
+.gallery .shot.wide:only-child { grid-column: 1 / -1; }
+.hero.small + main > section.block:first-child { padding-top: 24px; }
