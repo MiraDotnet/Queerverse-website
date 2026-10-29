@@ -7,7 +7,7 @@
 <meta name="description" content="Queerverse is a small, whitelisted, long-term queer Minecraft SMP.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Pixelify+Sans:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,54 +23,56 @@
     </nav>
   </div>
 </header>
-<div class="pride"></div>
-<main>
+<!-- mia: put a screenshot at images/home-top.jpg and it replaces the painted sunset. Shaders look great here. -->
+<section class="hero">
+  <img src="images/home-top.jpg" alt="" onerror="this.remove()">
   <div class="wrap">
-    <section class="hero">
-      <h1>Queerverse</h1>
-      <!-- mia: the yellow splash text picks one of these lines at random. Change them to your own jokes. -->
-      <span class="splash" data-lines="Now whitelisted!|Pranks welcome!|Bring snacks!|Build together!|Also try the shopping district!">Now whitelisted!</span>
-      <p>A small, whitelisted, long-term queer survival server.</p>
-      <p>Java Edition &middot; <span class="address">queerverse.net</span></p>
-      <div class="actions">
-        <a class="button" href="apply.html">How to apply</a>
-        <a class="button" href="https://discord.gg/YOUR-INVITE">Join the Discord</a>
-      </div>
-      <figure class="shot big" data-file="home-top.jpg">
-        <img src="images/home-top.jpg" alt="" onerror="this.remove()">
-      </figure>
-    </section>
+    <h1>Queerverse</h1>
+    <!-- mia: the yellow splash text picks one of these at random. Change them to your own. -->
+    <span class="splash" data-lines="Now whitelisted!|Pranks welcome!|Bring snacks!|Build together!|Also try the shopping district!">Now whitelisted!</span>
+    <p>A small, whitelisted, long-term queer survival server.</p>
+    <div class="actions">
+      <a class="button" href="apply.html">How to apply</a>
+      <a class="button ghost" href="https://discord.gg/YOUR-INVITE">Join the Discord</a>
+    </div>
+  </div>
+</section>
 
-    <section class="panel">
+<main>
+  <section class="block">
+    <div class="wrap">
       <h2>What it's like</h2>
-      <p class="todo">mia: write two or three sentences here about what the server is like, in your own words.</p>
-      <ul class="blocks">
-        <li>Build, mostly. Big projects, small projects, together or alone.</li>
-        <li>A shopping district.</li>
-        <li>Pranks, the harmless kind.</li>
-      </ul>
-    </section>
+      <p class="lead todo">mia: write two or three sentences here about what the server is like, in your own words.</p>
+      <dl class="facts">
+        <div><dt>Join</dt><dd><span class="address">queerverse.net</span></dd></div>
+        <div><dt>Version</dt><dd>Java Edition 26.3</dd></div>
+        <div><dt>Style</dt><dd>Survival, long-term</dd></div>
+        <div><dt>We do</dt><dd>Builds, shops, pranks</dd></div>
+      </dl>
+    </div>
+  </section>
 
-    <section class="panel">
+  <section class="block">
+    <div class="wrap">
       <h2>Builds</h2>
-      <!-- mia: upload screenshots to the images folder with these names (build-1.jpg, build-2.jpg ...)
+      <!-- mia: upload screenshots to the images folder with these names (build-1.jpg ... build-7.jpg)
            and they show up here by themselves. Change the captions to say what each build is and who made it. -->
-      <div class="grid">
-      <figure class="shot" data-file="build-1.jpg"><img src="images/build-1.jpg" alt="" onerror="this.remove()"><figcaption>caption</figcaption></figure>
+      <div class="gallery">
+      <figure class="shot wide" data-file="build-1.jpg"><img src="images/build-1.jpg" alt="" onerror="this.remove()"><figcaption>caption</figcaption></figure>
       <figure class="shot" data-file="build-2.jpg"><img src="images/build-2.jpg" alt="" onerror="this.remove()"><figcaption>caption</figcaption></figure>
       <figure class="shot" data-file="build-3.jpg"><img src="images/build-3.jpg" alt="" onerror="this.remove()"><figcaption>caption</figcaption></figure>
-      <figure class="shot" data-file="build-4.jpg"><img src="images/build-4.jpg" alt="" onerror="this.remove()"><figcaption>caption</figcaption></figure>
+      <figure class="shot wide" data-file="build-4.jpg"><img src="images/build-4.jpg" alt="" onerror="this.remove()"><figcaption>caption</figcaption></figure>
       <figure class="shot" data-file="build-5.jpg"><img src="images/build-5.jpg" alt="" onerror="this.remove()"><figcaption>caption</figcaption></figure>
       <figure class="shot" data-file="build-6.jpg"><img src="images/build-6.jpg" alt="" onerror="this.remove()"><figcaption>caption</figcaption></figure>
+      <figure class="shot" data-file="build-7.jpg"><img src="images/build-7.jpg" alt="" onerror="this.remove()"><figcaption>caption</figcaption></figure>
       </div>
-    </section>
-
-    <script>
-      var s = document.querySelector('.splash'), l = s.dataset.lines.split('|');
-      s.textContent = l[Math.floor(Math.random() * l.length)];
-    </script>
-  </div>
+    </div>
+  </section>
 </main>
+<script>
+  var s = document.querySelector('.splash'), l = s.dataset.lines.split('|');
+  s.textContent = l[Math.floor(Math.random() * l.length)];
+</script>
 <footer>
   <div class="wrap">
     <span>Queerverse SMP &middot; queerverse.net</span>

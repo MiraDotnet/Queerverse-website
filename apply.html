@@ -7,7 +7,7 @@
 <meta name="description" content="Queerverse is a small, whitelisted, long-term queer Minecraft SMP.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Pixelify+Sans:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,33 +23,40 @@
     </nav>
   </div>
 </header>
-<div class="pride"></div>
-<main>
+<!-- mia: put a screenshot at images/apply-top.jpg and it replaces the painted sunset. Shaders look great here. -->
+<section class="hero small">
+  <img src="images/apply-top.jpg" alt="" onerror="this.remove()">
   <div class="wrap">
-    <h1 class="page-title">How to apply</h1>
-    <section class="panel">
-      <p>We're a small whitelisted server, so new people join in small groups.</p>
+    <h1>How to apply</h1>
+    <p>We're a small whitelisted server, so new people join in small groups.</p>
+  </div>
+</section>
+
+<main>
+  <section class="block">
+    <div class="wrap">
       <p class="todo">mia: say who can apply (age range) and how active you'd like people to be.</p>
-      <ol class="steps">
+      <ol class="numbered">
         <li><h3>Fill in the form</h3>
           <!-- mia: put your Google Form link here -->
-          It takes a few minutes. <a href="https://forms.gle/YOUR-FORM">Application form</a></li>
-        <li><h3>Have a quick chat</h3>
-          If it looks like a good fit, we'll message you on Discord to say hi.</li>
-        <li><h3>Trial</h3>
-          You get whitelisted for a 2 to 4 week trial. After that you're a full member.</li>
+          <p>It takes a few minutes. <a href="https://forms.gle/YOUR-FORM">Application form</a></p></li>
+        <li><h3>Have a quick chat</h3><p>If it looks like a good fit, we'll message you on Discord to say hi.</p></li>
+        <li><h3>Trial</h3><p>You get whitelisted for a 2 to 4 week trial. After that you're a full member.</p></li>
       </ol>
-    </section>
-    <section class="panel">
+      <div class="actions"><a class="button" href="https://forms.gle/YOUR-FORM">Open the form</a></div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap">
       <h2>Server info</h2>
-      <ul class="blocks">
-        <li>Java Edition 26.3</li>
-        <li>Address: <span class="address">queerverse.net</span></li>
-        <li>Survival, whitelisted</li>
-      </ul>
+      <dl class="facts">
+        <div><dt>Join</dt><dd><span class="address">queerverse.net</span></dd></div>
+        <div><dt>Version</dt><dd>Java Edition 26.3</dd></div>
+        <div><dt>Mode</dt><dd>Survival, whitelisted</dd></div>
+      </dl>
       <p>Questions? Ask on the <a href="https://discord.gg/YOUR-INVITE">Discord</a>.</p>
-    </section>
-  </div>
+    </div>
+  </section>
 </main>
 <footer>
   <div class="wrap">
