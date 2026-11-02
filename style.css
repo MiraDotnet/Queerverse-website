@@ -191,3 +191,8 @@ code.cmd {
   padding: 1px 6px; color: var(--gold); white-space: nowrap;
 }
 .uses { margin: -.4em 0 .8em; color: var(--muted); font-size: .9rem; }
+/* a wide picture is two rows tall, with two small ones stacked next to it */
+@media (min-width: 761px) {
+  .gallery .shot.wide:not(:only-child) { grid-row: span 2; }
+  .gallery .shot.wide:not(:only-child) img { position: absolute; inset: 0; }
+}
